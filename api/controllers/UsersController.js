@@ -41,7 +41,7 @@ module.exports = {
 
             if (err) return next(err);
 
-            res.json(apiHelper.respondObjectData(200, "Get user success.", user));
+            res.json(user); //ApiHelper.respondObjectData(200, "Get user success.",
 
         });
 
@@ -68,7 +68,7 @@ module.exports = {
 
             if (err) return next(err);
 
-            res.json(apiHelper.respondObjectData(200, "Get user success.", user));
+            res.json(user); //ApiHelper.respondObjectData(200, "Get user success.",
 
         });
 
