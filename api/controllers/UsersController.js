@@ -5,7 +5,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 //var apiHelper = require(__dirname + '/../services/ApiHelper');
-var apiHelper = require('/app/api/services/ApiHelper');
+//var apiHelper = require('ApiHelper');
 module.exports = {
 	// a CREATE action
   create: function(req, res, next) {
