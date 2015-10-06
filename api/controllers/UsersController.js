@@ -5,7 +5,7 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 //var apiHelper = require(__dirname + '/../services/ApiHelper');
-//var apiHelper = require('ApiHelper');
+var apiHelper = require('../services/ApiHelper');
 module.exports = {
 	// a CREATE action
   create: function(req, res, next) {
@@ -41,7 +41,7 @@ module.exports = {
 
             if (err) return next(err);
 
-            res.json(user); //ApiHelper.respondObjectData(200, "Get user success.",
+            res.json(ApiHelper.respondObjectData(200, "Get user success.",user)); //
 
         });
 
@@ -68,7 +68,7 @@ module.exports = {
 
             if (err) return next(err);
 
-            res.json(user); //ApiHelper.respondObjectData(200, "Get user success.",
+            res.json(ApiHelper.respondObjectData(200, "Get user success.",user)); //ApiHelper.respondObjectData(200, "Get user success.",
 
         });
 
