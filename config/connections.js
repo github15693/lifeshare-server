@@ -45,10 +45,11 @@ module.exports.connections = {
   ***************************************************************************/
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+    host: '127.12.184.2',
     user: 'admin8UGDp6s',
     password: 'j1VxL29uk9kY',
-    database: 'lifeshare'
+    database: 'lifeshare',
+    port: 443
   },
 
   /***************************************************************************
