@@ -84,7 +84,8 @@ module.exports.connections = {
     password: 'Q9dEtor3-Ad3jDj6C-PlItavYL',
     port: 5432,
     database: 'detrla0cejc30o',
-    schema: true
+    schema: true,
+    ssl: true
   }
 
 
