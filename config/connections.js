@@ -45,9 +45,9 @@ module.exports.connections = {
   ***************************************************************************/
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/',
+    user: 'admin8UGDp6s',
+    password: 'j1VxL29uk9kY',
     database: 'lifeshare'
   },
 
