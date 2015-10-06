@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Custom CRUD Users Routes
+  'post /api/users': 'UsersController.create',
+  'get /api/users/:id?': 'UsersController.find',
 };

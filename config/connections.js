@@ -28,8 +28,11 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
-    adapter: 'sails-disk'
+//  localDiskDb: {
+//    adapter: 'sails-disk'
+//  },
+  memory: {
+      adapter: 'sails-postgresql' //sails-memory
   },
 
   /***************************************************************************
@@ -42,10 +45,10 @@ module.exports.connections = {
   ***************************************************************************/
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'lifeshare'
   },
 
   /***************************************************************************
@@ -56,13 +59,13 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
+  someMongoDBServer: {
     adapter: 'sails-mongo',
     host: 'localhost',
     port: 27017,
     // user: 'username',
     // password: 'password',
-    // database: 'your_mongo_db_name_here'
+//     database: 'lifeshare'
   },
 
   /***************************************************************************
@@ -76,10 +79,12 @@ module.exports.connections = {
   ***************************************************************************/
   somePostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
+    host: 'ec2-54-235-147-211.compute-1.amazonaws.com',
+    user: 'btebeoutnvnbuj',
+    password: 'Q9dEtor3-Ad3jDj6C-PlItavYL',
+    port: 5432,
+    database: 'detrla0cejc30o',
+    schema: true
   }
 
 
