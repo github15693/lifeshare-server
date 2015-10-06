@@ -4,7 +4,7 @@
  * @description :: Server-side logic for managing users
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
-var apiHelper = require('../services/ApiHelper');
+var apiHelper = require(__dirname + '/../services/ApiHelper');
 
 module.exports = {
 	// a CREATE action
