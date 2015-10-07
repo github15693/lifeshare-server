@@ -5,7 +5,6 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 //var apiHelper = require(__dirname + '/../services/ApiHelper');
-var apiHelper = require('../services/ApiHelper');
 module.exports = {
 	// a CREATE action
   create: function(req, res, next) {
@@ -37,12 +36,11 @@ module.exports = {
     if (id) {
         User.findOne(id, function(err, user) {
 
-            if(user === undefined) return res.notFound();
-
+            if(user === undefined) {
+                return res.json(ApiHelper.respondObjectData(404, "User not found.", null));
+            }
             if (err) return next(err);
-
-            res.json(ApiHelper.respondObjectData(200, "Get user success.",user)); //
-
+            res.json(ApiHelper.respondObjectData(200, "Get user success.", user)); //
         });
 
     } else {
@@ -64,11 +62,12 @@ module.exports = {
 
         User.find(options, function(err, user) {
 
-            if(user === undefined) return res.notFound();
+            if(user === undefined) {
+              return res.json(ApiHelper.respondObjectData(404, "User not found.", null));
+            }
 
             if (err) return next(err);
-
-            res.json(ApiHelper.respondObjectData(200, "Get user success.",user)); //ApiHelper.respondObjectData(200, "Get user success.",
+            res.json(ApiHelper.respondObjectData(200, "Get user success.", user)); //ApiHelper.respondObjectData(200, "Get user success.",
 
         });
 
