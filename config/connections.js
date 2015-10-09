@@ -32,7 +32,7 @@ module.exports.connections = {
 //    adapter: 'sails-disk'
 //  },
   memory: {
-      adapter: 'sails-postgresql' //sails-memory
+      adapter: 'sails-mysql' //sails-memory
   },
 
   /***************************************************************************
@@ -45,9 +45,9 @@ module.exports.connections = {
   ***************************************************************************/
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: 'localhost',//127.12.184.2
-    user: 'root',//admin8UGDp6s
-    password: '',//j1VxL29uk9kY
+    host: 'demo.innoria.com',//127.12.184.2
+    user: 'demo',//admin8UGDp6s
+    password: '@bc123456',//j1VxL29uk9kY
     database: 'lifeshare',
     port: 3306
   },
