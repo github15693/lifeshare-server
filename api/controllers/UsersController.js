@@ -35,7 +35,6 @@ module.exports = {
 
     if (id) {
         User.findOne(id, function(err, user) {
-
             if(user === undefined) {
                 return res.json(ApiHelper.respondObjectData(404, "User not found.", null));
             }
@@ -44,33 +43,7 @@ module.exports = {
         });
 
     } else {
-
-        var where = req.param('where');
-
-        if (_.isString(where)) {
-                where = JSON.parse(where);
-        }
-
-        var options = {
-                    limit: req.param('limit') || undefined,
-                    skip: req.param('skip')  || undefined,
-                    sort: req.param('sort') || undefined,
-                    where: where || undefined
-            };
-
-            console.log("This is the options", options);
-
-        User.find(options, function(err, user) {
-
-            if(user === undefined) {
-              return res.json(ApiHelper.respondObjectData(404, "User not found.", null));
-            }
-
-            if (err) return next(err);
-            res.json(ApiHelper.respondObjectData(200, "Get user success.", user)); //ApiHelper.respondObjectData(200, "Get user success.",
-
-        });
-
+      return res.json(ApiHelper.respondObjectData(404, "Missing parameter \'id\'", null));
     }
 
     function isShortcut(id) {

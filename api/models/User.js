@@ -19,6 +19,8 @@ module.exports = {
 
     email : { type: 'email', required:true, unique:true},
 
+    pwd : { type: 'string'},
+
     reg_id : { type: 'string' },
 
     last_login : { type: 'datetime' },
